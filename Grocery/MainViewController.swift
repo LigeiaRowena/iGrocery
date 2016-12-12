@@ -17,7 +17,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     
     @IBOutlet weak var tableView: UITableView!
-    var items = [NSManagedObject]()
+    var items = [Item]()
 
     
     // MARK: Init/launch viewController
@@ -70,8 +70,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier")
         let item = items[indexPath.row]
-        cell!.textLabel!.text = item.value(forKey: "text") as? String
-        
+        cell!.textLabel!.text = item.text        
         return cell!
     }
     
