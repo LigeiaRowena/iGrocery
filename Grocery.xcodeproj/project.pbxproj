@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DFBD683C1DCCB1E10078D4EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD683B1DCCB1E10078D4EC /* AppDelegate.swift */; };
-		DFBD683E1DCCB1E10078D4EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD683D1DCCB1E10078D4EC /* ViewController.swift */; };
+		DFBD683E1DCCB1E10078D4EC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD683D1DCCB1E10078D4EC /* MainViewController.swift */; };
 		DFBD68411DCCB1E10078D4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFBD683F1DCCB1E10078D4EC /* Main.storyboard */; };
 		DFBD68441DCCB1E10078D4EC /* Grocery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFBD68421DCCB1E10078D4EC /* Grocery.xcdatamodeld */; };
 		DFBD68461DCCB1E10078D4EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFBD68451DCCB1E10078D4EC /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		DFBD68381DCCB1E10078D4EC /* Grocery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBD683B1DCCB1E10078D4EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DFBD683D1DCCB1E10078D4EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DFBD683D1DCCB1E10078D4EC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DFBD68401DCCB1E10078D4EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFBD68431DCCB1E10078D4EC /* Grocery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Grocery.xcdatamodel; sourceTree = "<group>"; };
 		DFBD68451DCCB1E10078D4EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				DFBD683B1DCCB1E10078D4EC /* AppDelegate.swift */,
-				DFBD683D1DCCB1E10078D4EC /* ViewController.swift */,
+				DFBD683D1DCCB1E10078D4EC /* MainViewController.swift */,
 				DFBD683F1DCCB1E10078D4EC /* Main.storyboard */,
 				DFBD68451DCCB1E10078D4EC /* Assets.xcassets */,
 				DFBD68471DCCB1E10078D4EC /* LaunchScreen.storyboard */,
@@ -94,12 +94,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Francesca Corsini";
 				TargetAttributes = {
 					DFBD68371DCCB1E10078D4EC = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = BZPKHJ33V9;
+						DevelopmentTeam = F8Q5XK7RJ8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -141,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFBD68441DCCB1E10078D4EC /* Grocery.xcdatamodeld in Sources */,
-				DFBD683E1DCCB1E10078D4EC /* ViewController.swift in Sources */,
+				DFBD683E1DCCB1E10078D4EC /* MainViewController.swift in Sources */,
 				DFBD683C1DCCB1E10078D4EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +186,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -236,6 +237,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -265,7 +267,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BZPKHJ33V9;
+				DEVELOPMENT_TEAM = F8Q5XK7RJ8;
 				INFOPLIST_FILE = Grocery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = grocery.Grocery;
@@ -278,7 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BZPKHJ33V9;
+				DEVELOPMENT_TEAM = F8Q5XK7RJ8;
 				INFOPLIST_FILE = Grocery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = grocery.Grocery;
@@ -306,6 +308,7 @@
 				DFBD684F1DCCB1E10078D4EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
