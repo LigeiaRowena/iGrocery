@@ -33,29 +33,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // fetch persistent data
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
-        do {
-        let results = try managedContext.fetch(fetchRequest)
-        items = results as! [NSManagedObject]
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }
-    }
-    
-    
-    // MARK: CoreData
-    
-    
-    func saveItem(text: String) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        let entity = NSEntityDescription.entity(forEntityName: "Item", in: managedContext)
-        let item = NSManagedObject(entity: entity!, insertInto: managedContext)
-        item.setValue(text, forKey: "text")
-        appDelegate.saveContext()
-        items.append(item)
+        items = CoreDataManager.sharedInstance.getItems()
     }
     
     
@@ -66,7 +44,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let alertView = UIAlertController(title: "New Item", message: "Add a new item", preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save", style: .default, handler:{ (action:UIAlertAction) -> Void in
             let textField = alertView.textFields!.first
-            self.saveItem(text: textField!.text!)
+            // add item as persistent data
+            let item = CoreDataManager.sharedInstance.addItem(text: textField!.text!)
+            self.items.append(item)
             self.tableView.reloadData()
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler:{ (action:UIAlertAction) -> Void in

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF7C9F4F1DFEB09C00135B13 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C9F4E1DFEB09C00135B13 /* CoreDataManager.swift */; };
 		DFBD683C1DCCB1E10078D4EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD683B1DCCB1E10078D4EC /* AppDelegate.swift */; };
 		DFBD683E1DCCB1E10078D4EC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD683D1DCCB1E10078D4EC /* MainViewController.swift */; };
 		DFBD68411DCCB1E10078D4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFBD683F1DCCB1E10078D4EC /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF7C9F4E1DFEB09C00135B13 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		DFBD68381DCCB1E10078D4EC /* Grocery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBD683B1DCCB1E10078D4EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFBD683D1DCCB1E10078D4EC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				DFBD683B1DCCB1E10078D4EC /* AppDelegate.swift */,
 				DFBD683D1DCCB1E10078D4EC /* MainViewController.swift */,
+				DF7C9F4E1DFEB09C00135B13 /* CoreDataManager.swift */,
 				DFBD683F1DCCB1E10078D4EC /* Main.storyboard */,
 				DFBD68451DCCB1E10078D4EC /* Assets.xcassets */,
 				DFBD68471DCCB1E10078D4EC /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				DFBD68441DCCB1E10078D4EC /* Grocery.xcdatamodeld in Sources */,
 				DFBD683E1DCCB1E10078D4EC /* MainViewController.swift in Sources */,
+				DF7C9F4F1DFEB09C00135B13 /* CoreDataManager.swift in Sources */,
 				DFBD683C1DCCB1E10078D4EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
