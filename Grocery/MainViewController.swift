@@ -75,6 +75,21 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let item = items[indexPath.row]
+            CoreDataManager.sharedInstance.deleteItem(item: item)
+            items.remove(at: indexPath.row)
+            self.tableView.reloadData()
+        }
+    }
+    
+    
     // MARK: UITableViewDelegate
 
     

@@ -47,6 +47,13 @@ class CoreDataManager {
     }
     
     
+    func deleteItem(item: Item) {
+        // delete item from persistent data
+        self.managedObjectContext.delete(item)
+        self.saveContext()
+    }
+    
+    
     // MARK: CoreData
 
     
