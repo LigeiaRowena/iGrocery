@@ -12,7 +12,7 @@ import UIKit
 // MARK: - MainViewController
 
 
-class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, EditViewControllerDelegate {
 
     
     // MARK: Properties
@@ -44,8 +44,17 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let editViewController = segue.destination as! EditViewController
             let index = self.tableView.indexPathForSelectedRow?.row
             editViewController.item = items[index!]
+            editViewController.delegate = self
             self.tableView.deselectRow(at: self.tableView.indexPathForSelectedRow!, animated: true)
         }
+    }
+    
+    
+    // MARK: EditViewControllerDelegate
+    
+    
+    func didEditItem(item: Item) {
+        self.tableView.reloadData()
     }
     
     

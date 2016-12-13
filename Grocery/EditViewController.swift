@@ -9,6 +9,14 @@
 import UIKit
 
 
+// MARK: - EditViewControllerDelegate
+
+
+protocol EditViewControllerDelegate {
+    func didEditItem(item: Item)
+}
+
+
 // MARK: - EditViewController
 
 
@@ -18,7 +26,8 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     // MARK: Properties
     public var item: Item!
     @IBOutlet weak var textField: UITextField!
-    
+    var delegate: EditViewControllerDelegate?
+
     
     // MARK: Init/launch viewController
 
@@ -50,8 +59,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         self.textField.resignFirstResponder()
         self.item.text = self.textField.text
         CoreDataManager.sharedInstance.saveContext()
-        let mainViewController = self.navigationController?.viewControllers.first as! MainViewController
-        mainViewController.tableView.reloadData()
+        self.delegate?.didEditItem(item: item)
         _ = self.navigationController?.popViewController(animated: true)
     }
 }
