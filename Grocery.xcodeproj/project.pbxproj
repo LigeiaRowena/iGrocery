@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DF27ED471DFEB9DA00770AAB /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27ED451DFEB9DA00770AAB /* Item+CoreDataClass.swift */; };
 		DF27ED481DFEB9DA00770AAB /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27ED461DFEB9DA00770AAB /* Item+CoreDataProperties.swift */; };
+		DF27ED4B1DFEDCD500770AAB /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27ED4A1DFEDCD500770AAB /* EditViewController.swift */; };
+		DF27ED4D1DFEDEC300770AAB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27ED4C1DFEDEC300770AAB /* Constant.swift */; };
 		DF7C9F4F1DFEB09C00135B13 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C9F4E1DFEB09C00135B13 /* CoreDataManager.swift */; };
 		DFBD683C1DCCB1E10078D4EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD683B1DCCB1E10078D4EC /* AppDelegate.swift */; };
 		DFBD683E1DCCB1E10078D4EC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD683D1DCCB1E10078D4EC /* MainViewController.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		DF27ED451DFEB9DA00770AAB /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DF27ED461DFEB9DA00770AAB /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DF27ED4A1DFEDCD500770AAB /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		DF27ED4C1DFEDEC300770AAB /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		DF7C9F4E1DFEB09C00135B13 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		DFBD68381DCCB1E10078D4EC /* Grocery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grocery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBD683B1DCCB1E10078D4EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				DF27ED491DFEBB0A00770AAB /* Model */,
 				DFBD683B1DCCB1E10078D4EC /* AppDelegate.swift */,
 				DFBD683D1DCCB1E10078D4EC /* MainViewController.swift */,
+				DF27ED4A1DFEDCD500770AAB /* EditViewController.swift */,
+				DF27ED4C1DFEDEC300770AAB /* Constant.swift */,
 				DFBD683F1DCCB1E10078D4EC /* Main.storyboard */,
 				DFBD68451DCCB1E10078D4EC /* Assets.xcassets */,
 				DFBD68471DCCB1E10078D4EC /* LaunchScreen.storyboard */,
@@ -160,9 +166,11 @@
 				DF27ED481DFEB9DA00770AAB /* Item+CoreDataProperties.swift in Sources */,
 				DF27ED471DFEB9DA00770AAB /* Item+CoreDataClass.swift in Sources */,
 				DFBD68441DCCB1E10078D4EC /* Grocery.xcdatamodeld in Sources */,
+				DF27ED4D1DFEDEC300770AAB /* Constant.swift in Sources */,
 				DFBD683E1DCCB1E10078D4EC /* MainViewController.swift in Sources */,
 				DF7C9F4F1DFEB09C00135B13 /* CoreDataManager.swift in Sources */,
 				DFBD683C1DCCB1E10078D4EC /* AppDelegate.swift in Sources */,
+				DF27ED4B1DFEDCD500770AAB /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

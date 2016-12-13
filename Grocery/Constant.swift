@@ -1,0 +1,29 @@
+//
+//  Constant.swift
+//  Grocery
+//
+//  Created by Francesca Corsini on 12/12/16.
+//  Copyright © 2016 Francesca Corsini. All rights reserved.
+//
+
+import Foundation
+
+
+// MARK: - Constant
+
+
+class Constant {
+    
+    
+    struct CellIdentifiers {
+        static let mainCellIdentifier = "mainCellIdentifier"
+    }
+    
+    
+    struct Segues {
+        static let showEditSegue = "showEdit"
+    }
+}
+
+
+

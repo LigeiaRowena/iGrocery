@@ -7,13 +7,15 @@
 //
 
 import UIKit
-import CoreData
 
 
 // MARK: - MainViewController
 
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    
+    // MARK: Properties
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -26,7 +28,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	override func viewDidLoad() {
 		super.viewDidLoad()
         title = "Main List"
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CellIdentifier")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constant.CellIdentifiers.mainCellIdentifier)
 	}
     
     
@@ -34,6 +36,16 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewWillAppear(animated)
         // fetch persistent data
         items = CoreDataManager.sharedInstance.getItems()
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constant.Segues.showEditSegue {
+            let editViewController = segue.destination as! EditViewController
+            let index = self.tableView.indexPathForSelectedRow?.row
+            editViewController.item = items[index!]
+            self.tableView.deselectRow(at: self.tableView.indexPathForSelectedRow!, animated: true)
+        }
     }
     
     
@@ -68,7 +80,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier")
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.CellIdentifiers.mainCellIdentifier)
         let item = items[indexPath.row]
         cell!.textLabel!.text = item.text        
         return cell!
@@ -94,6 +106,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: Constant.Segues.showEditSegue, sender: nil)
     }
 }
 
